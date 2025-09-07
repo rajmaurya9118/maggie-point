@@ -1,0 +1,267 @@
+/* ============================= */
+/* Global Styles                 */
+/* ============================= */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fdfbf7;
+  color: #333;
+}
+
+h1, h2 {
+  font-family: 'Pacifico', cursive;
+  margin: 0;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 40px 15px;
+  }
+}
+
+/* ============================= */
+/* Hero Section                  */
+/* ============================= */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero video.hero-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero .hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 50, 25, 0.6); /* forest green overlay */
+  z-index: -1;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  color: #ffcf33; /* golden accent */
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-top: 12px;
+  color: #fff3c4;
+}
+
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+/* ============================= */
+/* About Section                 */
+/* ============================= */
+.about {
+  background: #fff;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #114d2d; /* deep green */
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* ============================= */
+/* Gallery Section               */
+/* ============================= */
+.gallery {
+  background: #fefaf3;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  color: #114d2d;
+  margin-bottom: 20px;
+}
+
+.gallery-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 2px solid #ffcf33;
+  background: #fff;
+  color: #114d2d;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #ffcf33;
+  color: #fff;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-item {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px);
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item p {
+  margin: 10px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* ============================= */
+/* Lightbox                      */
+/* ============================= */
+.lightbox {
+  display: none;   /* hidden initially */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(0px);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* When active */
+.lightbox.active {
+  display: flex;
+  backdrop-filter: blur(4px);
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 80%;
+  text-align: center;
+  animation: zoomIn 0.3s ease;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 10px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+}
+
+.lightbox-content p {
+  margin-top: 12px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Close Button */
+.lightbox .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  background: #ff9800;
+  border-radius: 50%;
+  padding: 5px 12px;
+  line-height: 1;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.lightbox .close:hover {
+  background: #e67e00;
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

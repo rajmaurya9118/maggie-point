@@ -1,0 +1,453 @@
+/* === General Styles === */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fef7f0;
+  color: #333;
+}
+
+/* === Header === */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.2rem;
+  background-color: #f5a623;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  background: #fff;
+}
+
+.title-text h1 {
+  font-size: 1.6rem;
+  margin: 0;
+  font-weight: 700;
+  color: #fff;
+}
+
+.title-text p {
+  font-size: 0.85rem;
+  margin: 0.2rem 0 0;
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* Mobile Header */
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 0.9rem 1rem;
+  }
+  .logo {
+    height: 75px;
+    width: 75px;
+  }
+  .title-text h1 {
+    font-size: 1.3rem;
+  }
+  .title-text p {
+    font-size: 0.75rem;
+  }
+}
+
+/* === Main Content Spacing === */
+main {
+  padding: 0 1.2rem; /* horizontal spacing */
+  max-width: 1200px; /* center content */
+  margin: 0 auto;
+}
+
+/* === Category Buttons === */
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem 0; /* vertical padding */
+}
+
+/* Filter Buttons */
+.filter-btn {
+  padding: 0.6rem 1.6rem;
+  background: #fff;
+  border: 2px solid #ffcf33;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffcf33;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #ffcf33;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Horizontal scroll for mobile */
+@media (max-width: 768px) {
+  .category-buttons {
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0.5rem 0.5rem;
+  }
+  .category-buttons::-webkit-scrollbar {
+    display: none;
+  }
+  .category-buttons .filter-btn {
+    flex: 0 0 auto;
+  }
+}
+
+/* === Menu Grid === */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 auto;
+  padding: 0 0.5rem; /* small padding inside grid */
+}
+
+/* === Menu Card === */
+.menu-card {
+  cursor: pointer;
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* Menu Image */
+.menu-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.menu-card:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+}
+
+/* Info Section */
+.menu-info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex-grow: 1;
+}
+
+.menu-info h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.menu-card:hover h3 {
+  color: #f5a623;
+}
+
+.menu-info p.price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f5a623;
+  margin: 0;
+}
+
+/* Add to Cart */
+.add-cart-btn {
+  background: #ffcf33;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.add-cart-btn:hover {
+  background: #d48f1d;
+  transform: scale(1.05);
+}
+
+/* Wishlist */
+.wishlist-btn {
+  background: #fff;
+  border: 2px solid #ffcf33;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  height: 42px;
+  width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffcf33;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wishlist-btn:hover {
+  background: #ffcf33;
+  color: #fff;
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Cart Modal Styles === */
+.cart-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.cart-modal.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.cart-modal-content {
+  background-color: #fff7f0;
+  padding: 1.8rem;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.cart-modal.show .cart-modal-content {
+  transform: scale(1);
+}
+
+.modal-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.modal-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.modal-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f5a623;
+  margin-bottom: 1rem;
+}
+
+.quantity-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.quantity-selector button {
+  background-color: #ffcf33;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.quantity-selector button:hover {
+  background-color: #d48f1d;
+}
+
+#qtyValue {
+  font-size: 1.2rem;
+  width: 2rem;
+  text-align: center;
+}
+
+.modal-total {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.modal-add-btn {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 600px) {
+  main {
+    padding: 0 0.8rem;
+  }
+  .category-buttons {
+    padding: 0.5rem 0.8rem;
+  }
+  .menu-grid {
+    gap: 1rem;
+  }
+  .cart-modal-content {
+    max-width: 90%;
+    padding: 2rem;
+  }
+  .quantity-selector button {
+    padding: 0.6rem 1rem;
+    font-size: 1.4rem;
+  }
+  .modal-name {
+    font-size: 1.6rem;
+  }
+  .modal-price,
+  .modal-total {
+    font-size: 1.4rem;
+  }
+}
+.orpo.scrolled {
+    top: 10px; /* slightly shrink on scroll */
+  }
+
+  .orpo-1 {
+    display: flex;
+    flex-direction: column; /* stack buttons vertically */
+    gap: 15px; /* gap between Orders and Profile */
+    padding: 10px;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+  }
+
+  .nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* icon-text gap */
+    padding: 10px 16px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .nav-btn i {
+    font-size: 18px;
+    transition: transform 0.4s ease, color 0.4s ease;
+  }
+
+  .nav-btn span {
+    transition: color 0.4s ease, text-shadow 0.4s ease;
+  }
+
+  .nav-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #f5a623;
+    transition: all 0.5s ease;
+    z-index: 0;
+  }
+
+  .nav-btn:hover::before {
+    left: 0;
+  }
+
+  .nav-btn:hover {
+    color: #fff;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+
+  .nav-btn:hover i {
+    transform: translateX(5px) rotate(10deg) scale(1.2);
+    color: #fff;
+  }
+
+  .nav-btn:hover span {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 210, 130, 0.8);
+  }
+
+  .nav-btn * {
+    position: relative;
+    z-index: 1;
+  }
+
+/* Hide .orpo on mobile (<1024px) */
+@media (max-width: 1023px) {
+  .orpo {
+    display: none !important;
+  }
+}

@@ -1,0 +1,163 @@
+/* GENERAL RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* BODY AND BACKGROUND */
+body {
+  /* background: linear-gradient(135deg, #ff9966, #ff5e62); */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ERROR MESSAGES */
+.error {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* MODAL CARD */
+.tab-content {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+/* HEADINGS */
+.tab-content h2 {
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* INPUT FIELDS */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #ff7a00;
+  box-shadow: 0 0 10px rgba(255, 122, 0, 0.2);
+}
+
+/* OTP BOX */
+.otp-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.otp-box input {
+  flex: 1;
+}
+
+.otp-box button {
+  padding: 0 20px;
+  background: linear-gradient(90deg, #ff7a00);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.otp-box button:hover {
+  background: linear-gradient(90deg,  #ff7a00);
+}
+
+/* SIGNUP BUTTON */
+.btn {
+  background: linear-gradient(90deg, #ff7a00);
+  color: #fff;
+  padding: 15px 0;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 122, 0, 0.4);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 122, 0, 0.5);
+}
+
+/* LINKS */
+.switch-text {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.switch-text a {
+  color: #ff7a00;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.switch-text a:hover {
+  text-decoration: underline;
+}
+
+.forgot-link {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #ff4500;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 480px) {
+  .tab-content {
+    padding: 30px 20px;
+    width: 90%;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .otp-box button,
+  .btn {
+    font-size: 14px;
+    padding: 12px 0;
+  }
+}

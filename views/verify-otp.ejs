@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Verify OTP</title>
+  <link rel="stylesheet" href="/css/profile.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="profile-container card">
+    <h2 class="section-title">📩 Verify OTP</h2>
+    <p class="section-sub">Enter the 6-digit OTP sent to <b><%= email %></b>.</p>
+    
+    <form action="/verify-otp" method="POST" class="form-box" id="otpForm">
+      <input type="hidden" name="email" value="<%= email %>"/>
+      
+      <div class="otp-inputs">
+        <input type="text" maxlength="1" class="otp-box" required/>
+        <input type="text" maxlength="1" class="otp-box" required/>
+        <input type="text" maxlength="1" class="otp-box" required/>
+        <input type="text" maxlength="1" class="otp-box" required/>
+        <input type="text" maxlength="1" class="otp-box" required/>
+        <input type="text" maxlength="1" class="otp-box" required/>
+      </div>
+
+      <!-- Final hidden field to combine OTP -->
+      <input type="hidden" name="otp" id="otpValue"/>
+
+      <button type="submit" class="save-btn">Verify</button>
+    </form>
+    
+    <a href="/forgot-password" class="link">Resend OTP</a>
+  </div>
+
+  <script src="/js/otp.js"></script>
+</body>
+</html>

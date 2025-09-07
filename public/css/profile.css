@@ -1,0 +1,279 @@
+/* GLOBAL STYLES */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fdf6f0;
+  color: #333;
+}
+
+/* HEADINGS */
+h2, h3 {
+  margin: 0;
+}
+
+/* CONTAINER */
+.profile-container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  padding: 25px;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+/* PROFILE HEADER */
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.profile-header h2 {
+  font-size: 1.8rem;
+  color: #ff7a00;
+}
+
+.logout-btn {
+  background: #e74c3c;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+/* SECTION HEADER */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  color: #ff7a00;
+  font-weight: 600;
+}
+
+/* EMAIL & PASSWORD DISPLAY */
+#emailDisplay, .password-display {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* BUTTONS */
+.edit-btn, .save-btn, .cancel-btn, .forgot-link {
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  background: #ffa726;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background: #e68900;
+  transform: scale(1.05);
+}
+
+.save-btn {
+  background: #ff7a00;
+  color: #fff;
+}
+
+.save-btn:hover {
+  background: #e65a00;
+}
+
+.cancel-btn {
+  background: #ddd;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background: #bbb;
+}
+
+.forgot-link {
+  display: inline-block;
+  color: #ff4500;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* INPUTS */
+input[type="text"], input[type="password"], input[type="email"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  border-color: #ff7a00;
+  box-shadow: 0 0 10px rgba(255,122,0,0.2);
+}
+
+/* PASSWORD FORM */
+#passwordForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ADDRESS LIST */
+#addressList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 12px;
+}
+
+#addressList li {
+  background: #fff6ed;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+#addressList button {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* OTP INPUTS */
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 15px 0;
+}
+
+.otp-box {
+  width: 50px;
+  height: 55px;
+  text-align: center;
+  font-size: 1.6rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.otp-box:focus {
+  border-color: #ff7a00;
+  box-shadow: 0 0 6px rgba(255,122,0,0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  
+  color:#ff7a00;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 20px;
+  transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #e6a12c;
+  transform: scale(1.05);
+}
+
+.back-btn i {
+  font-size: 1rem;
+}
+.profile-container {
+  max-width: 600px;   /* keeps container within screen */
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box; /* include padding in width */
+}
+
+.profile-section input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  box-sizing: border-box; /* ensures it doesn’t overflow */
+}
+
+@media (max-width: 600px) {
+  .profile-container {
+    padding: 15px;
+  }
+  .profile-section input {
+    padding: 10px 12px;
+  }
+}
+/* Forgot Password Link inside form */
+.profile-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+/* Position forgot link at bottom-right on desktop */
+.forgot-link {
+  align-self: flex-end;  /* right align inside flex container */
+  margin-top: 5px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .forgot-link {
+    align-self: flex-start; /* left align for smaller screens */
+    font-size: 0.9rem;
+  }
+}

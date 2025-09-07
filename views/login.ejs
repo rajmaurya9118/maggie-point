@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahari - Login</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <form action="/login" method="post">
+    <div class="login-container">
+      <div class="login-card">
+        <h2 class="title">Login</h2>
+
+        <!-- Mobile number -->
+        <input type="text" id="login-number" name="number" placeholder="Enter Mobile Number" required>
+
+        <!-- Radio selection -->
+        <div class="login-method">
+          <label>
+            <input type="radio" name="login-method" value="otp" checked onchange="toggleLoginMethod()"> OTP
+          </label>
+          <label>
+            <input type="radio" name="login-method" value="password" onchange="toggleLoginMethod()"> Password
+          </label>
+        </div>
+
+        <!-- Password input -->
+        <input type="password" id="login-password" name="password" placeholder="Enter Password" style="display:none;">
+
+        <!-- OTP input -->
+        <div class="otp-box" id="login-otp-box">
+          <input type="text" id="login-otp" name="otp" placeholder="Enter OTP">
+          <button type="button" onclick="sendLoginOtp()">Send OTP</button>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn">Login</button>
+
+        <p class="switch-text">Don't have an account? <a href="/signup">Sign Up</a></p>
+        <a href="/forgot-password" class="forgot-link">Forgot Password?</a>
+      </div>
+    </div>
+  </form>
+  
+
+
+  <script>
+    function toggleLoginMethod() {
+      const method = document.querySelector('input[name="login-method"]:checked').value;
+      const passwordInput = document.getElementById("login-password");
+      const otpBox = document.getElementById("login-otp-box");
+
+      if (method === "password") {
+        passwordInput.style.display = "block";
+        otpBox.style.display = "none";
+      } else {
+        passwordInput.style.display = "none";
+        otpBox.style.display = "flex";
+      }
+    }
+
+    function sendLoginOtp() {
+      alert("OTP sent for Login!");
+    }
+
+    window.addEventListener("DOMContentLoaded", toggleLoginMethod);
+  </script>
+</body>
+</html>

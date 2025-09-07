@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Orders | Pahadi Maggie</title>
+  <link rel="stylesheet" href="/css/order.css"/>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Current Order</h1>
+
+    <% if (currentOrders && currentOrders.length > 0) { %>
+      <table style="width:100%; border-collapse: collapse;">
+        <thead>
+          <tr style="text-align:left; border-bottom:1px solid #eee;">
+            <th>Name</th>
+            <th style="width:110px;">Quantity</th>
+            <th>Unit Price</th>
+            <th>Total</th>
+            <th style="width:100px;">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% let totalAmount = 0; %>
+          <% currentOrders.forEach(item => { %>
+            <tr class="order-item" data-name="<%= item.name %>">
+              <td class="item-name"><%= item.name %></td>
+              <td>
+                <input type="number" class="item-quantity" value="<%= item.quantity %>" min="1" data-price="<%= item.unitPrice %>"/>
+              </td>
+              <td>₹<%= item.unitPrice %></td>
+              <td class="item-total">₹<%= item.total %></td>
+              <td><button class="remove-item-btn">❌ Remove</button></td>
+            </tr>
+            <% totalAmount += item.total; %>
+          <% }); %>
+        </tbody>
+      </table>
+
+      <p style="margin-top:12px;"><strong>Total: </strong><span id="total-price">₹<%= totalAmount %></span></p>
+
+      <button id="order-btn" <%= !hasAddress ? "disabled" : "" %> style="padding:10px 16px; border-radius:8px;">
+        Place Order
+      </button>
+
+      <% if (!hasAddress) { %>
+        <p style="color:#d9534f; margin-top:8px;">⚠️ Please add an address in your <a href="/profile">profile</a> before placing an order.</p>
+      <% } %>
+
+    <% } else { %>
+      <p>No current orders in cart.</p>
+    <% } %>
+
+    <hr style="margin:20px 0; border:none; border-top:1px solid #eee;"/>
+
+    <h2>Previous Orders</h2>
+    <% if (previousOrders && previousOrders.length > 0) { %>
+      <% previousOrders.forEach((o, index) => { %>
+        <div class="history-card" data-id="<%= o.id %>" style="padding:12px; background:#fff; border-radius:8px; margin-bottom:12px;">
+          <p><strong>Order #<%= index + 1 %></strong> - <%= o.date %></p>
+          <ul>
+            <% o.items.forEach(i => { %>
+              <li><%= i.name %> × <%= i.quantity %> = ₹<%= i.total %></li>
+            <% }) %>
+          </ul>
+          <p><strong>Total:</strong> ₹<%= o.total %></p>
+          <p><strong>Status:</strong> <span class="status"><%= o.status || "Pending" %></span></p>
+
+          <% if (o.status !== "Delivered" && o.status !== "Cancelled") { %>
+            <button class="cancel-btn" data-id="<%= o.id %>">Cancel Order</button>
+          <% } %>
+        </div>
+      <% }) %>
+    <% } else { %>
+      <p>No previous orders found.</p>
+    <% } %>
+
+  </div>
+
+  <!-- hidden div to store server value -->
+<div id="hasAddress" data-has="<%= hasAddress ? 'true' : 'false' %>" style="display:none;"></div>
+
+<script>
+  // Read from data attribute instead of mixing EJS directly
+  window.__HAS_ADDRESS__ = document.getElementById("hasAddress").dataset.has === "true";
+</script>
+
+  <script src="/js/order.js"></script>
+</body>
+</html>

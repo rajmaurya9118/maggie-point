@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile | Pahari Maggie</title>
+  <link rel="stylesheet" href="/css/profile.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Back Button -->
+  <a href="/menu" class="back-btn">
+    <i class="fas fa-arrow-left"></i>✖
+  </a>
+
+  <div class="profile-container">
+    <!-- Profile Header -->
+    <div class="profile-header card">
+      <div class="user-info">
+        <h2 id="displayName">
+          <%= user.name 
+                ? user.name.split(" ").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ") 
+                : "" %>
+        </h2>
+      </div>
+      <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+
+    <!-- Email Section -->
+    <div class="profile-section card">
+      <div class="section-header">
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+      </div>
+      <p id="emailDisplay"><%= user.email || "Not added" %></p>
+    </div>
+
+    <!-- Password Section -->
+    <div class="profile-section card">
+      <div class="section-header">
+        <i class="fas fa-lock"></i>
+        <h3>Change Password</h3>
+      </div>
+      <form action="/update-password" method="POST">
+        <input type="password" name="currentPassword" placeholder="Current Password" required />
+        <input type="password" name="newPassword" placeholder="New Password" required />
+        <input type="password" name="confirmPassword" placeholder="Confirm New Password" required />
+        <button type="submit" class="save-btn"><i class="fas fa-key"></i> Update Password</button>
+      </form>
+      <a  href="/forgot-password" class="forgot-link">Forgot Password?</a>
+    </div>
+
+    <!-- Address Section -->
+    <div class="profile-section card">
+      <div class="section-header">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Delivery Addresses</h3>
+      </div>
+      <ul id="addressList">
+        <% if (user.addresses.length === 0) { %>
+          <li>No addresses added yet</li>
+        <% } else { %>
+          <% user.addresses.forEach(addr => { %>
+            <li>
+              <%= addr 
+                    ? addr.split(" ").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ") 
+                    : "" %>
+            </li>
+          <% }) %>
+        <% } %>
+      </ul>
+      <form action="/add-address" method="POST">
+        <input type="text" name="address" placeholder="Enter address" required />
+        <button type="submit" class="save-btn"><i class="fas fa-plus"></i> Add Address</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

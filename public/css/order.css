@@ -1,0 +1,223 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f8fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+/* Headings */
+h1, h2 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+h2 {
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+/* Current Order Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+thead {
+  background: #fafafa;
+  border-bottom: 1px solid #eee;
+}
+
+th, td {
+  padding: 14px;
+  text-align: center;
+  font-size: 14px;
+}
+
+tbody tr + tr {
+  border-top: 1px solid #f0f0f0;
+}
+
+.item-quantity {
+  width: 55px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.item-quantity:focus {
+  border-color: #f5a623;
+  outline: none;
+}
+
+.item-total {
+  font-weight: 600;
+  color: #f5a623;
+}
+
+/* Total */
+#total-price {
+  font-weight: 600;
+  color: #f5a623;
+  font-size: 16px;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+/* Place Order */
+#order-btn {
+  background: #f5a623;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 8px;
+}
+
+#order-btn:hover {
+  background: #e2961f;
+}
+
+/* Cancel Button */
+.cancel-btn {
+  background: transparent;
+  color: #d9534f;
+  border: 1px solid #d9534f;
+  padding: 6px 14px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.cancel-btn:hover {
+  background: #fbeaea;
+}
+
+/* Previous Orders */
+.history-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.history-card strong {
+  color: #222;
+}
+
+.history-card ul {
+  margin: 10px 0;
+  padding-left: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Status */
+.status {
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.status:contains("Pending") {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status:contains("Delivered") {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status:contains("Cancelled") {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Sticky Total Bar */
+.total-bar {
+  background: #fff;
+  border-top: 1px solid #eee;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+  z-index: 100;
+}
+
+/* Empty state */
+p {
+  color: #666;
+  margin: 10px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px;
+    padding-bottom: 80px;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 12px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  }
+
+  td {
+    text-align: left;
+    padding: 6px 8px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #444;
+  }
+}

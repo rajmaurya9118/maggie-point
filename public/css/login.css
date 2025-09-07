@@ -1,0 +1,181 @@
+/* GENERAL RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* PAGE BACKGROUND */
+body {
+  background: url('background.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LOGIN CONTAINER */
+.login-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  min-height: 100vh; /* vertical center */
+}
+
+/* LOGIN CARD */
+.login-card {
+  background: #fff;
+  padding: 35px 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 400px;       /* normal desktop */
+  min-width: 280px;       /* keeps readable on small phones */
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* TITLE */
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* INPUT FIELDS */
+.login-card input[type="text"],
+.login-card input[type="password"] {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.login-card input:focus {
+  border-color: #ff7a00;
+  box-shadow: 0 0 8px rgba(255, 122, 0, 0.3);
+}
+
+/* RADIO BUTTONS */
+.login-method {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.login-method input[type="radio"] {
+  margin-right: 6px;
+  accent-color: #ff7a00;
+}
+
+/* OTP BOX */
+.otp-box {
+  display: flex;
+  gap: 10px;
+}
+
+.otp-box input {
+  flex: 1;
+}
+
+.otp-box button {
+  padding: 12px 18px;
+  background: #ff7a00;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.otp-box button:hover {
+  background: #e66c00;
+}
+
+/* LOGIN BUTTON */
+.btn {
+  background: #ff7a00;
+  color: #fff;
+  border: none;
+  padding: 14px 0;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e66c00;
+}
+
+/* SWITCH TEXT */
+.switch-text {
+  font-size: 13px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.switch-text a {
+  color: #ff7a00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.switch-text a:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 25px 20px;
+    width: 95%;
+  }
+
+  .login-card input[type="text"],
+  .login-card input[type="password"] {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+
+  .otp-box button {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 12px 0;
+    font-size: 14px;
+  }
+}
+
+/* LARGE SCREEN RESPONSIVE */
+@media (min-width: 1024px) {
+  .login-card {
+    max-width: 500px;   /* slightly wider on big screens */
+    padding: 40px 35px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .btn {
+    font-size: 18px;
+  }
+}

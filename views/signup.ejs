@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pahari - Signup</title>
+  <link rel="stylesheet" href="/css/signup.css"/>
+</head>
+<body>
+  <form action="/signup" method="post" id="signupForm">
+    <div class="modal-overlay">
+      <div class="tab-content">
+        <h2 style="text-align:center; margin-bottom:20px;">Sign Up</h2>
+
+        <input type="text" id="signup-name" name="name" placeholder="Enter Name" required>
+        <input type="text" id="signup-number" name="number" placeholder="Enter Mobile Number" required>
+        
+        <!-- Email -->
+        <input type="email" id="signup-email" name="email" placeholder="Enter Email" required>
+        <small class="error" id="email-error"></small>
+
+        <!-- Password -->
+        <input type="password" id="signup-password" name="password" placeholder="Enter Password" required>
+        <small class="error" id="password-error"></small>
+
+        <!-- Confirm Password -->
+        <input type="password" id="signup-confirm-password" name="password_check" placeholder="Confirm Password" required>
+        <small class="error" id="confirm-error"></small>
+
+        <!-- OTP -->
+        <div class="otp-box" id="signup-otp-box">
+          <input type="text" id="signup-otp" name="otp" placeholder="Enter OTP">
+          <button type="button">Send OTP</button>
+        </div>
+
+        <button type="submit" class="btn">Sign Up</button>
+
+        <p class="switch-text">Already have an account? <a href="/login">Login</a></p>
+        <a href="/forgot-password" class="forgot-link">Forgot Password?</a>
+
+      </div>
+    </div>
+  </form>
+
+  <script src="/js/signup.js">
+    
+  </script>
+</body>
+</html>
