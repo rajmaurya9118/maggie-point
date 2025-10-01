@@ -7,7 +7,7 @@ const menuData = [
   { name: "Vegetable Maggi", category: "Maggi", price: 59, image: "/images/vegetable-maggie.png" },
   { name: "Paneer Maggi", category: "Maggi", price: 69, image: "/images/paneer-maggie.png" },
   { name: "Butter Cheese Maggi", category: "Maggi", price: 69, image: "/images/butter-cheese-maggie.png" },
-  { name: "Pahadi Special Maggi", category: "Maggi", price: 98, image: "https://source.unsplash.com/600x400/?special-maggi" },
+  { name: "Pahadi Special Maggi", category: "Maggi", price: 98, image: "/images/pahari-special-maggie.png" },
 
   // Pasta
   { name: "Red Sauce Pasta", category: "Pasta", price: 89, image: "/images/red-sauce-pasta.png" },
@@ -20,30 +20,29 @@ const menuData = [
   { name: "Cheez Sandwich", category: "Sandwich", price: 59, image: "/images/cheese-sandwich.png" },
   { name: "Corn Mayo Sandwich", category: "Sandwich", price: 59, image: "/images/corn-mayo-sandwich.png" },
   { name: "Three Layer Sandwich", category: "Sandwich", price: 79, image: "/images/three-layer-sandwich.png" },
-  { name: "Pahadi Special Sandwich", category: "Sandwich", price: 99, image: "https://source.unsplash.com/600x400/?special-sandwich" },
-
+  { name: "Pahari Special Sandwich", category: "Sandwich", price: 99, image: "/images/pahari-special-sandwich.png"},
   // Pizza
   { name: "Margherita Pizza", category: "Pizza", price: 79, image: "/images/margherita-pizza.png" },
   { name: "Sweet Corn Pizza", category: "Pizza", price: 89, image: "/images/sweet-corn-pizza.png" },
   { name: "Veggie Delite Pizza", category: "Pizza", price: 99, image: "/images/veggie-delite-pizza.png" },
   { name: "Extra Cheez Pizza", category: "Pizza", price: 109, image: "/images/extra-cheese-pizza.png" },
   { name: "Paneer Pizza", category: "Pizza", price: 129, image: "/images/paneer-pizza.png" },
-  { name: "Pahadi Special Pizza", category: "Pizza", price: 149, image: "https://source.unsplash.com/600x400/?special-pizza" },
+  { name: "Pahari Special Pizza", category: "Pizza", price: 149, image: "/images/pahari-special-pizza.png" },
 
   // Burger
   { name: "Veg Burger", category: "Burger", price: 39, image: "/images/veg-burger.png" },
   { name: "Cheez Burger", category: "Burger", price: 49, image: "/images/cheese-burger.png" },
   { name: "Paneer Burger", category: "Burger", price: 59, image: "/images/paneer-burger.png" },
   { name: "Paneer Cheez Burger", category: "Burger", price: 69, image: "/images/paneer-cheese-burger.png" },
-  { name: "Pahadi Special Burger", category: "Burger", price: 89, image: "/images/special-burger.png" },
+  { name: "Pahari Special Burger", category: "Burger", price: 89, image: "/images/pahari-special-burger.png" },
 
   // Momos
   { name: "Steam Momos", category: "Momos", price: 39, image: "/images/steam-momos.png" },
   { name: "Fried Momos", category: "Momos", price: 49, image: "/images/fried-momos.png" },
   { name: "Tandoori Momos", category: "Momos", price: 59, image: "/images/tanduri-momos.png" },
   { name: "Cheez Momos", category: "Momos", price: 69, image: "/images/cheese-momos.png" },
-  { name: "Malai Momos", category: "Momos", price: 79, image: "https://source.unsplash.com/600x400/?malai-momos" },
-  { name: "Pahadi Special Momos", category: "Momos", price: 89, image: "https://source.unsplash.com/600x400/?special-momos" },
+  { name: "Malai Momos", category: "Momos", price: 79, image: "/images/malai-momos.png" },
+  { name: "Pahadi Special Momos", category: "Momos", price: 89, image: "/images/pahari-special-momos.png" },
 
   // French Fries
   { name: "Plane French Fries", category: "French Fries", price: 69, image: "/images/plane-french-fries.png" },
@@ -57,28 +56,28 @@ const menuData = [
   { name: "Pizza + French Fries + Soft Drink", category: "Combo", price: 149, image: "/images/pizza-fries-combo.png" },
 
   // Cold Coffee
-  { name: "Plane Cold Coffee", category: "Cold Coffee", price: 89, image: "https://source.unsplash.com/600x400/?cold-coffee" },
-  { name: "Strong Choco Cold Coffee", category: "Cold Coffee", price: 79, image: "https://source.unsplash.com/600x400/?chocolate-cold-coffee" },
-  { name: "Cold Coffee with Ice Cream", category: "Cold Coffee", price: 99, image: "https://source.unsplash.com/600x400/?coffee-icecream" },
-  { name: "Pahadi Special Cold Coffee", category: "Cold Coffee", price: 119, image: "https://source.unsplash.com/600x400/?special-cold-coffee" },
+  { name: "Plane Cold Coffee", category: "Cold Coffee", price: 89, image: "/images/cold-coffee.png" },
+  { name: "Strong Choco Cold Coffee", category: "Cold Coffee", price: 79, image: "/images/choco-cold-coffee.png" },
+  { name: "Cold Coffee with Ice Cream", category: "Cold Coffee", price: 99, image: "/images/coffee-icecream.png" },
+  { name: "Pahadi Special Cold Coffee", category: "Cold Coffee", price: 119, image: "/images/pahari-special-cold-coffee.png" },
 
   // shake
-  {name:"Strawberry Shake", category:"Shake",price:69,image:""},
-  {name:"Black Crane Shake", category:"Shake",price:69,image:""},
-  {name:"Butter Scotch Shake", category:"Shake",price:69,image:""},
-  {name:"Mango Shake", category:"Shake",price:69,image:""},
-  {name:"Banana Shake", category:"Shake",price:69,image:""},
+  {name:"Strawberry Shake", category:"Shake",price:69,image:"/images/strawberry-shake.png"},
+  {name:"Black Crane Shake", category:"Shake",price:69,image:"/images/blue-crane-shake.png"},
+  {name:"Butter Scotch Shake", category:"Shake",price:69,image:"/images/butter-scotch-shake.png"},
+  {name:"Mango Shake", category:"Shake",price:69,image:"/images/mango-shake.png"},
+  {name:"Banana Shake", category:"Shake",price:69,image:"/images/banana-shake.png"},
   //Mocktail
-  {name:"Blue Lagoon Mocktail", category:"Mocktail",price:69,image:""},
-  {name:"Klwi Mocktail", category:"Mocktail",price:79,image:""},
-  {name:"Bubble Gum Mocktail", category:"Mocktail",price:79,image:""},
-  {name:"Black Iron Mocktail", category:"Mocktail",price:89,image:""},
+  {name:"Blue Lagoon Mocktail", category:"Mocktail",price:69,image:"/images/blue-logoon-mocktail.png"},
+  {name:"Kiwi Mocktail", category:"Mocktail",price:79,image:"/images/kiwi-mocktail.png"},
+  {name:"Bubble Gum Mocktail", category:"Mocktail",price:79,image:"/images/bubble-gum-mocktail.png"},
+  {name:"Black Iron Mocktail", category:"Mocktail",price:89,image:"/images/black-iron-moctail.png"},
   //Hot Coffee
-  {name:"Coffee", category:"Hot Coffee",price:20,image:""},
-  {name:"Black Coffee", category:"Hot Coffee",price:25,image:""},
-  {name:"Strong Coffee", category:"Hot Coffee",price:30,image:""},
-  {name:"Chocolate Coffee", category:"Hot Coffee",price:50,image:""},
-  {name:"Strong Hot Chocolate Coffee", category:"Hot Coffee",price:60,image:""}
+  {name:"Coffee", category:"Hot Coffee",price:20,image:"/images/coffee.png"},
+  {name:"Black Coffee", category:"Hot Coffee",price:25,image:"/images/black-coffee.png"},
+  {name:"Strong Coffee", category:"Hot Coffee",price:30,image:"/images/strong-coffee.png"},
+  {name:"Chocolate Coffee", category:"Hot Coffee",price:50,image:"/images/chocolate-coffee.png"},
+  {name:"Strong Hot Chocolate Coffee", category:"Hot Coffee",price:60,image:"/images/strong-hot-chocolate-coffee.png"}
 
 ];
 

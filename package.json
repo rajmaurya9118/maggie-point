@@ -28,5 +28,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paharimaggie-9118/pahari-maggie-point.git"
+  },
+  "bugs": {
+    "url": "https://github.com/paharimaggie-9118/pahari-maggie-point/issues"
+  },
+  "homepage": "https://github.com/paharimaggie-9118/pahari-maggie-point#readme"
 }

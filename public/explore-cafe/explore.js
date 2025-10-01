@@ -27,18 +27,163 @@ const exploreContent = {
       caption: "Warm interiors"
     },
     {
+      type: "image",
+      category: "Interior",
+      src: "2.jpg",
+      caption: "Warm interiors"
+    },
+    {
+      type: "image",
+      category: "Interior",
+      src: "3.jpg",
+      caption: "Warm interiors"
+    },
+    {
+      type: "image",
+      category: "Interior",
+      src: "4.jpg",
+      caption: "Warm interiors"
+    },
+    {
+      type: "image",
+      category: "Interior",
+      src: "5.jpg",
+      caption: "Warm interiors"
+    },
+    {
+      type: "image",
+      category: "Interior",
+      src: "6.jpg",
+      caption: "Warm interiors"
+    },
+    {
+      type: "image",
+      category: "Interior",
+      src: "7.jpg",
+      caption: "Warm interiors"
+    },
+    {
+      type: "image",
+      category: "Interior",
+      src: "8.jpg",
+      caption: "Warm interiors"
+    },
+    {
+      type: "image",
+      category: "Interior",
+      src: "9.jpg",
+      caption: "Warm interiors"
+    },
+    {
+      type: "image",
+      category: "Interior",
+      src: "10.jpg",
+      caption: "Warm interiors"
+    },
+    {
+      type: "image",
+      category: "Interior",
+      src: "11.jpg",
+      caption: "Warm interiors"
+    },
+    {
+      type: "image",
+      category: "Interior",
+      src: "12.jpg",
+      caption: "Warm interiors"
+    },
+    {
+      type: "image",
+      category: "Interior",
+      src: "13.jpg",
+      caption: "Warm interiors"
+    },
+    {
+      type: "image",
+      category: "Interior",
+      src: "15.jpg",
+      caption: "Warm interiors"
+    },
+    {
+      type: "image",
+      category: "Interior",
+      src: "16.jpg",
+      caption: "Warm interiors"
+    },
+    {
+      type: "image",
+      category: "Interior",
+      src: "17.jpg",
+      caption: "Warm interiors"
+    },
+    
+    
+     {
+      type: "image",
+      category: "Interior",
+      src: "1.jpg",
+      caption: "Warm interiors"
+    },
+    {
       type: "video",
       category: "Vibes",
-      src: "videos/cafe-night.mp4",
-      poster: "ten.jpg"
+      src: "hero.mp4",
+      poster: "images/ten.jpg"
     },
     {
       type: "image",
       category: "Events",
       src: "one.jpg",
       caption: "Live Music Night 🎶"
-    }
-    
+    },
+     {
+      type: "image",
+      category: "Food",
+      src: "burger-pizza-combo.png",
+      caption: "Combo 😋 "
+    },
+     {
+      type: "image",
+      category: "Food",
+      src: "cheese-burger.png",
+      caption: "Cheese Burger 🍔"
+    }, {
+      type: "image",
+      category: "Food",
+      src: "cheese-french-fries.png",
+      caption: "Cheese French Fries 🍟 "
+    },
+    {
+      type: "image",
+      category: "Food",
+      src: "cheese-momos.png",
+      caption: "Cheese Momos  "
+    },
+    {
+      type: "image",
+      category: "Food",
+      src: "cheese-packet-pasta.png",
+      caption: "Cheese Packet Pasta   "
+    },
+    {
+      type: "image",
+      category: "Food",
+      src: "combo-meal.png",
+      caption: "Combo Meal  "
+    },
+    {
+      type: "image",
+      category: "Food",
+      src: "margherita-pizza.png",
+      caption: "Marghrita Pizza 🍕 "
+    },
+    {
+      type: "image",
+      category: "Food",
+      src: "simple-maggie.jpg",
+      caption: "Simple Maggie  🍜 "
+    },
+  
   ]
 };
 
