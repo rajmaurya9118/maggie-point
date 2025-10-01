@@ -6,6 +6,7 @@
   "dependencies": {
     "async": "^3.2.6",
     "balanced-match": "^1.0.2",
+    "bcrypt": "^6.0.0",
     "brace-expansion": "^2.0.2",
     "cookie-parser": "^1.4.7",
     "dotenv": "^17.2.2",
@@ -28,7 +29,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/paharimaggie-9118/pahari-maggie-point.git"
